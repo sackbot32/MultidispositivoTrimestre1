@@ -778,7 +778,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: -944628639613478452, guid: 2e0d402cafea5314c903712ddedaa28c, type: 3}
-  cambiarCamara: {fileID: 1608793488394113483, guid: 2e0d402cafea5314c903712ddedaa28c, type: 3}
   sensitivityY: 20
   sensitivityX: 20
   firstPerson: {fileID: 584967318}
