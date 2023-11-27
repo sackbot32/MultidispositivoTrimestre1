@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnPoint
+  - Enemy
+  - Mastodonte
+  - Bullet
+  - EnemySmol
+  - ZigZag
   layers:
   - Default
   - TransparentFX

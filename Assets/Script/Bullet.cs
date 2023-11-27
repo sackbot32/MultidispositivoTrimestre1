@@ -16,11 +16,25 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeSpent += Time.deltaTime;
+        if (gameObject.activeSelf)
+        {
+            timeSpent += Time.deltaTime;
+        }
         transform.position += transform.forward * speed * Time.deltaTime;
         if(timeSpent >= lifeTime)
         {
-            Destroy(gameObject);
+            timeSpent = 0;
+            gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            timeSpent = 0;
+            other.gameObject.GetComponent<EnemyHealth>().TakeDamage(damage);
+            gameObject.SetActive(false);
         }
     }
 }
